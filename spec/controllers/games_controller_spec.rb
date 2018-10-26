@@ -29,7 +29,7 @@ RSpec.describe GamesController, type: :controller do
   # Game. As you add validations to Game, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("title" => "This is a title", "desc" => "This is a description")
+    {"title" => "This is a title", "desc" => "This is a description"}
   }
 
 
@@ -82,14 +82,14 @@ RSpec.describe GamesController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {"title" => "a new title", "desc" => "A new description"}
       }
 
       it "updates the requested game" do
         game = Game.create! valid_attributes
         put :update, params: {id: game.to_param, game: new_attributes}
         game.reload
-        skip("Add assertions for updated state")
+        expect(controller.notice).to eq('Game was successfully updated.')
       end
 
       it "redirects to the game" do
