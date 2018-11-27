@@ -10,9 +10,14 @@ steps:
 - task: UseRubyVersion@0
   inputs:
     versionSpec: '>= 2.4.5'
+   
+- script: |
+    apt-get install postgresql postgresql-contrib libpq-dev
+  displayName: 'Install Postgres'
 
 - script: |
     gem install bundler
+    gem install pg
     gem install rails
   displayName: 'Install Dependencies and Rails'
 
