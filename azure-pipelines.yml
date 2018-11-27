@@ -9,12 +9,12 @@ pool:
 steps:
 - task: UseRubyVersion@0
   inputs:
-    versionSpec: '= 2.4.5'
+    versionSpec: '>= 2.4.5'
 
 - script: |
     gem install bundler
     gem install rails
-  displayName: 'bundle install'
+  displayName: 'Install Dependencies and Rails'
 
 - script: rails -v
-  displayName: 'bundle exec rspec'
+  displayName: 'Ruby Version Check'
