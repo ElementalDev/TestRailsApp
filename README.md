@@ -1,6 +1,6 @@
 # README
 
-[![Build Status](https://dev.azure.com/admreececollett/RailsAppPipelineTest/_apis/build/status/RCollettSG.RailsAppForJenkinsTest)](https://dev.azure.com/admreececollett/RailsAppPipelineTest/_build/latest?definitionId=4)
+[![Build Status](https://dev.azure.com/admreececollett/RailsAppPipelineTest/_apis/build/status/RailsAppForJenkinsTest)](https://dev.azure.com/admreececollett/RailsAppPipelineTest/_build/latest?definitionId=4)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
