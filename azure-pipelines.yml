@@ -12,7 +12,7 @@ steps:
     versionSpec: '>= 2.4.5'
    
 - script: |
-    apt-get install postgresql postgresql-contrib libpq-dev
+    sudo apt-get install postgresql postgresql-contrib libpq-dev
   displayName: 'Install Postgres'
 
 - script: |
