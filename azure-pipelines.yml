@@ -20,8 +20,16 @@ steps:
     gem install bundler
     gem install pg
     gem install rails
-    bundler
   displayName: 'Install Dependencies and Rails'
-
-- script: rails -v
-  displayName: 'Ruby Version Check'
+  
+- script: bundle
+  displayName: 'Install required gems'
+   
+- script: | 
+    rails db:create
+    rails db:migrate
+  displayName: 'Create database and migrate data'
+  
+- script: |
+    rails exec rspec
+  displayName: 'Test with rspec'
