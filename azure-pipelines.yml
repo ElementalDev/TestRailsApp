@@ -12,6 +12,7 @@ steps:
     versionSpec: '>= 2.4.5'
    
 - script: |
+    sudo apt-get update
     sudo apt-get install postgresql postgresql-contrib libpq-dev
   displayName: 'Install Postgres'
 
@@ -19,6 +20,7 @@ steps:
     gem install bundler
     gem install pg
     gem install rails
+    bundler
   displayName: 'Install Dependencies and Rails'
 
 - script: rails -v
