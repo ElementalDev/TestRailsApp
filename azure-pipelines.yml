@@ -9,7 +9,7 @@ pool:
 steps:
 - task: UseRubyVersion@0
   inputs:
-    versionSpec: '>= 2.4.5'
+    versionSpec: '= 2.4.5'
 
 - script: |
     gem install bundler
