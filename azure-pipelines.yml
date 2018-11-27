@@ -25,7 +25,8 @@ steps:
 - script: bundle
   displayName: 'Install required gems'
    
-- script: | 
+- script: |
+    sudo - postgres
     rails db:create
     rails db:migrate
   displayName: 'Create database and migrate data'
