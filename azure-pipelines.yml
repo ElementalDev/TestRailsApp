@@ -15,7 +15,8 @@ steps:
     gem install bundler
     gem install rails
     bundle install
+    rails generate rspec:install
   displayName: 'bundle install'
 
-- script: bundle exec rake
-  displayName: 'bundle exec rake'
+- script: bundle exec rspec spec
+  displayName: 'bundle exec rspec'
