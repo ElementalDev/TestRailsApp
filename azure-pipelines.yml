@@ -14,11 +14,11 @@ steps:
 - script: |
     sudo apt-get update
     sudo apt-get install postgresql postgresql-contrib libpq-dev
-    sudo -u postgres postgres_setup_azure.sql
   displayName: 'Install Postgres'
   
 - script: |
-    sudo -u postgres psql -f postgres_setup_azure.sql
+    sudo -u postgres 
+    psql -f postgres_setup_azure.sql
   displayName: 'Setup Postgres'
   
 - script: |
@@ -31,7 +31,6 @@ steps:
   displayName: 'Install required gems'
    
 - script: |
-    sudo -u postgres
     rails db:create
     rails db:migrate
   displayName: 'Create database and migrate data'
