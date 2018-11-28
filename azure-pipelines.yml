@@ -17,8 +17,7 @@ steps:
   displayName: 'Install Postgres'
   
 - script: |
-    sudo su - postgres 
-    psql -f postgres_setup_azure.sql
+    sudo -H -u postgres -c 'psql -f postgres_setup_azure.sql'
     exit
   displayName: 'Setup Postgres'
   
