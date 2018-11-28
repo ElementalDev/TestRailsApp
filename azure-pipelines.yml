@@ -17,7 +17,7 @@ steps:
   displayName: 'Install Postgres'
   
 - script: |
-    sudo pkexec --user postgres psql -f ./postgres_setup_azure.sql
+    sudo pkexec --user postgres psql -c 'CREATE ROLE vsts WITH createdb;'
     exit
   displayName: 'Setup Postgres'
   
