@@ -11,31 +11,5 @@ steps:
   inputs:
     versionSpec: '>= 2.4.5'
    
-- script: |
-    sudo apt-get update
-    sudo apt-get install postgresql postgresql-contrib libpq-dev
-  displayName: 'Install Postgres'
-  
-- script: |
-    sudo pkexec --user postgres psql -c 'CREATE ROLE vsts WITH createdb;'
-    sudo pkexec --user postgres psql -c 'ALTER ROLE vsts WITH superuser;'
-    sudo pkexec --user postgres psql -c 'ALTER ROLE vsts WITH login;'
-  displayName: 'Setup Postgres'
-  
-- script: |
-    gem install bundler
-    gem install pg
-    gem install rails
-  displayName: 'Install Dependencies and Rails'
-  
-- script: bundle
-  displayName: 'Install required gems'
-   
-- script: |
-    rails db:create
-    rails db:migrate
-  displayName: 'Create database and migrate data'
-  
-- script: |
-    rails rspec spec
-  displayName: 'Test with rspec'
+- script: ./provision.sh
+  displayName: 'Testing...'
