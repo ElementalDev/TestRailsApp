@@ -18,5 +18,6 @@ steps:
   
 - script: |
     git checkout master
-    git merge origin dev
+    git merge dev
+    git push origin master
   displayName: "Push to master branch"
