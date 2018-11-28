@@ -14,8 +14,9 @@ steps:
 - script: |
     sudo apt-get update
     sudo apt-get install postgresql postgresql-contrib libpq-dev
-  displayName: 'Install Postgres'
-
+    sudo -u postgres bash -f postgres_setup_azure.sql
+  displayName: 'Install and set up Postgres'
+  
 - script: |
     gem install bundler
     gem install pg
