@@ -15,3 +15,6 @@ steps:
     sudo chmod 777 ./provision.sh
     ./provision.sh
   displayName: 'Testing...'
+  
+- script: git push origin master
+  displayName: "Push to master branch"
