@@ -15,3 +15,8 @@ steps:
     sudo chmod 777 ./provision.sh
     ./provision.sh
   displayName: 'Testing...'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/test-*.xml'
+    testRunTitle: 'Ruby tests'
