@@ -18,7 +18,8 @@ steps:
   
 - script: |
     sudo pkexec --user postgres psql -c 'CREATE ROLE vsts WITH createdb;'
-    exit
+    sudo pkexec --user postgres psql -c 'ALTER ROLE vsts WITH superuser;'
+    sudo pkexec --user postgres psql -c 'ALTER ROLE vsts WITH login;'
   displayName: 'Setup Postgres'
   
 - script: |
