@@ -16,5 +16,7 @@ steps:
     ./provision.sh
   displayName: 'Testing...'
   
-- script: git push origin master
+- script: |
+    git checkout master
+    git merge origin dev
   displayName: "Push to master branch"
