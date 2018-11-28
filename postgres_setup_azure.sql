@@ -1,1 +1,1 @@
-CREATE ROLE vsts WITH createdb
+CREATE ROLE vsts WITH createdb;
