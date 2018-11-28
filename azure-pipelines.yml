@@ -37,5 +37,5 @@ steps:
   displayName: 'Create database and migrate data'
   
 - script: |
-    rails exec rspec
+    rails rspec spec
   displayName: 'Test with rspec'
