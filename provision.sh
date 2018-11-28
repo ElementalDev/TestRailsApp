@@ -30,4 +30,4 @@ rails db:migrate
 
 # Run rspec tests
 echo "Running tests..."
-rspec spec
+rake test
