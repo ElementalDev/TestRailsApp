@@ -19,6 +19,7 @@ steps:
 - script: |
     sudo su - postgres 
     psql -f postgres_setup_azure.sql
+    exit
   displayName: 'Setup Postgres'
   
 - script: |
