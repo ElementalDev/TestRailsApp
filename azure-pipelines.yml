@@ -9,14 +9,9 @@ pool:
 steps:
 - task: UseRubyVersion@0
   inputs:
-    versionSpec: '>= 2.5'
-
+    versionSpec: '>= 2.4.5'
+   
 - script: |
-    gem install bundler
-    gem install rails
-    bundle install
-    rails generate rspec:install
-  displayName: 'bundle install'
-
-- script: bundle exec rspec spec
-  displayName: 'bundle exec rspec'
+    sudo chmod 777 ./provision.sh
+    ./provision.sh
+  displayName: 'Testing...'
