@@ -11,5 +11,7 @@ steps:
   inputs:
     versionSpec: '>= 2.4.5'
    
-- script: sudo ./provision.sh
+- script: |
+    sudo chmod 777 ./provision.sh
+    ./provision.sh
   displayName: 'Testing...'
