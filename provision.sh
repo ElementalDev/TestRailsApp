@@ -16,8 +16,11 @@ sudo apt-get install postgresql postgresql-contrib libpq-dev
 echo "--------------------------"
 echo "| Setting up Postgres... |"
 echo "--------------------------"
+echo "sudo pkexec --user postgres psql -c 'CREATE ROLE vsts WITH createdb;'"
 sudo pkexec --user postgres psql -c 'CREATE ROLE vsts WITH createdb;'
+echo "sudo pkexec --user postgres psql -c 'ALTER ROLE vsts WITH superuser;'"
 sudo pkexec --user postgres psql -c 'ALTER ROLE vsts WITH superuser;'
+echo "sudo pkexec --user postgres psql -c 'ALTER ROLE vsts WITH login;'"
 sudo pkexec --user postgres psql -c 'ALTER ROLE vsts WITH login;'
 
 # Install the required gems
