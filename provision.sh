@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Update packages
-
 echo "------------------------"
 echo "| Updating Packages... |"
 echo "------------------------"
